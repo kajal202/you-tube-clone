@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+   
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   
+    <title>Your-tube</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+   
+
+    <button id="openPopup">Open Popup</button>
+    <script>
+      let popup;
+  
+      document.getElementById('openPopup').addEventListener('click', () => {
+        popup = window.open('https://your-popup-site.com/popup.html', '_blank');
+  
+        // Start listening for messages
+        window.addEventListener('message', (event) => {
+          // Ensure the message is from the expected origin
+          if (event.origin !== 'https://your-popup-site.com') return;
+  
+          if (event.data === 'popup-closed') {
+            console.log('Popup was closed!');
+            // Do something, like update UI
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>

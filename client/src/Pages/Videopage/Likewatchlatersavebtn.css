@@ -1,0 +1,29 @@
+.btns_cont_videoPage{
+    display: flex;
+    flex-grow: 5;
+    flex-direction: row-reverse;
+}
+.btn_VideoPage{
+    margin:  auto 0;
+    display: flex;
+}
+.btn_VideoPage span{
+
+    padding:5px;
+    border-radius: 40px;
+    background-color: rgb(43, 44, 44);
+}
+.like_dislike_subscibe{
+    margin-left: 15px;
+    padding:4px;
+    border-radius: 40px;
+    background-color: rgb(43, 44, 44);
+}
+.like_videoPage{
+    margin: 0.5rem;
+    display: flex;
+    cursor: pointer;
+}
+.btns_videoPage{
+    margin: auto 0.5rem;
+}
